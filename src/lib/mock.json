@@ -1,0 +1,67 @@
+{
+  "response": {
+    "user": {
+      "name": "John Doe",
+      "profileIcon": "path/to/icon.jpg",
+      "score": 200,
+      "rank": "06"
+    },
+    "leaderboard": [
+      {
+        "name": "Alice",
+        "score": 200,
+        "rank": "01"
+      },
+      {
+        "name": "Bob",
+        "score": 200,
+        "rank": "02"
+      },
+      {
+        "name": "Charlie",
+        "score": 200,
+        "rank": "03"
+      },
+      {
+        "name": "Charlie",
+        "score": 200,
+        "rank": "04"
+      },
+      {
+        "name": "Charlie",
+        "score": 200,
+        "rank": "05"
+      }
+    ],
+    "TaskData": [
+      {
+        "id": "12345",
+        "status": "Last practice etc etc",
+        "title": "Smartphone",
+        "date": "2022/01/01",
+        "description": "A description about the above data."
+      },
+      {
+        "id": "12346",
+        "status": "Last practice etc etc",
+        "title": "Practice",
+        "date": "2022/01/01",
+        "description": "A description about the above data."
+      },
+      {
+        "id": "12347",
+        "status": "Last practice etc etc",
+        "title": "Text Title Here",
+        "date": "2022/01/01",
+        "description": "A description about the above data."
+      },
+      {
+        "id": "12348",
+        "status": "Last practice etc etc",
+        "title": "Text Title Here",
+        "date": "2022/01/01",
+        "description": "A description about the above data."
+      }
+    ]
+  }
+}

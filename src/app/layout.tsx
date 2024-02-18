@@ -1,8 +1,14 @@
+import Navbar from "@/components/navbar";
+import Sidebar from "@/components/sidebar";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +22,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={cn(
+          "relative min-h-screen w-screen bg-zinc-800 text-white",
+          inter.className,
+        )}
+      >
+        {/* Note to self: Use Fixed instead of absolute to prevent overflow */}
+        <div className="fixed left-0 top-0 h-[85vh] max-h-screen w-[65vw] translate-x-[-50%] translate-y-[-50%] transform rounded-full bg-[#357551] opacity-20 mix-blend-lighten blur-[500px]" />
+        <div className="fixed bottom-0 right-0 h-[90vh] max-h-screen w-[57vw] translate-x-[50%] translate-y-[50%] transform rounded-full bg-[#357551] opacity-20 mix-blend-lighten blur-[500px]" />
+        <div className="fixed bottom-0 right-0 h-full w-full rounded-md bg-gray-400 bg-opacity-0 bg-clip-padding backdrop-blur-3xl backdrop-filter" />
+        <div className="flex w-full flex-col md:flex-row">
+          <aside className="max-w-1/4 hidden h-auto min-h-screen md:block">
+            <Sidebar />
+          </aside>
+          <nav className="backdrop-blur-none md:hidden">
+            <Navbar />
+          </nav>
+          <main className="m-10 h-full flex-grow backdrop-blur-none lg:mr-56 lg:mt-14">
+            {children}
+          </main>
+        </div>
+      </body>
     </html>
   );
 }
